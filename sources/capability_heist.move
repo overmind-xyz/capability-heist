@@ -75,7 +75,7 @@ module overmind::capability_heist {
         @param robber - player of the game
         @param answer - answer to the ENTER_BANK_QUESTION question
     */
-    public entry fun enter_bank(robber: &signer, answer: String) acquires Robber {
+    public entry fun enter_bank(robber: &signer) acquires Robber {
         // TODO: Create a variable holding answer for ENTER_BANK_QUESTION
 
         // TODO: Assert Robber is initialized
@@ -90,7 +90,7 @@ module overmind::capability_heist {
         @param robber - player of the game
         @param answer - answer to the TAKE_HOSTAGE_QUESTION question
     */
-    public entry fun take_hostage(robber: &signer, answer: String) acquires Robber {
+    public entry fun take_hostage(robber: &signer) acquires Robber {
         // TODO: Create a variable holding answer for TAKE_HOSTAGE_QUESTION
 
         // TODO: Assert Robber is initialized
@@ -107,7 +107,7 @@ module overmind::capability_heist {
         @param robber - player of the game
         @param answer - answer to the GET_KEYCARD_QUESTION question
     */
-    public entry fun get_keycard(robber: &signer, answer: String) acquires Robber {
+    public entry fun get_keycard(robber: &signer) acquires Robber {
         // TODO: Create a variable holding answer for GET_KEYCARD_QUESTION
 
         // TODO: Assert Robber is initialized
@@ -124,7 +124,7 @@ module overmind::capability_heist {
         @param robber - player of the game
         @param answer - answer to the OPEN_VAULT_QUESTION question
     */
-    public entry fun open_vault(robber: &signer, answer: String) acquires Robber {
+    public entry fun open_vault(robber: &signer) acquires Robber {
         // TODO: Create a variable holding answer for OPEN_VAULT_QUESTION
 
         // TODO: Assert Robber is initialized
