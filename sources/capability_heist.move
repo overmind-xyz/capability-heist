@@ -1,7 +1,7 @@
 /*
     In the first place, this quest requires from you complete the smart contract following provided hints (TODOs)
     After that, you should answer the four questions located in "QUESTIONS AND ANSWERS" section and type your answers
-        in the corresponding consts with prefix "USER_ANSWER" in capability_heist_test module.
+        in the corresponding consts with prefix "USER_ANSWER" in capability_heist module.
 */
 module overmind::capability_heist {
     use std::signer;
@@ -9,6 +9,7 @@ module overmind::capability_heist {
     use aptos_std::aptos_hash;
     use aptos_std::capability;
     use aptos_framework::account::{Self, SignerCapability};
+    use std::vector;
 
     friend overmind::capability_heist_test;
 
@@ -38,6 +39,11 @@ module overmind::capability_heist {
 
     const OPEN_VAULT_QUESTION: vector<u8> = b"Can capability be stored in the global storage? The answer should start with a capital letter (Yes/No)";
     const OPEN_VAULT_ANSWER: vector<u8> = x"51d13ec71721d968037b05371474cbba6e0acb3d336909662489d0ff1bf58b028b67b3c43e04ff2aa112529e2b6d78133a4bb2042f9c685dc9802323ebd60e10";
+
+    const ENTER_BANK_USER_ANSWER: vector<u8> = b"";
+    const TAKE_HOSTAGE_USER_ANSWER: vector<u8> = b"";
+    const GET_KEYCARD_USER_ANSWER: vector<u8> = b"";
+    const OPEN_VAULT_USER_ANSWER: vector<u8> = b"";
 
     /////////////////////////
     // CAPABILITY FEATURES //
@@ -76,11 +82,10 @@ module overmind::capability_heist {
         @param answer - answer to the ENTER_BANK_QUESTION question
     */
     public entry fun enter_bank(robber: &signer) acquires Robber {
-        // TODO: Create a variable holding answer for ENTER_BANK_QUESTION
 
         // TODO: Assert Robber is initialized
 
-        // TODO: Assert the answer is correct
+        // TODO: Assert the answer is correct user's answer is correct
 
         // TODO: Delegate EnterBank capability to the robber
     }
@@ -91,13 +96,12 @@ module overmind::capability_heist {
         @param answer - answer to the TAKE_HOSTAGE_QUESTION question
     */
     public entry fun take_hostage(robber: &signer) acquires Robber {
-        // TODO: Create a variable holding answer for TAKE_HOSTAGE_QUESTION
 
         // TODO: Assert Robber is initialized
 
         // TODO: Acquire capability from the previous question by the robber
 
-        // TODO: Assert the answer is correct
+        // TODO: Assert that user's answer is correct
 
         // TODO: Delegate TakeHostage capability to the robber
     }
@@ -108,13 +112,11 @@ module overmind::capability_heist {
         @param answer - answer to the GET_KEYCARD_QUESTION question
     */
     public entry fun get_keycard(robber: &signer) acquires Robber {
-        // TODO: Create a variable holding answer for GET_KEYCARD_QUESTION
-
         // TODO: Assert Robber is initialized
 
         // TODO: Acquire capabilities from the previous questions by the robber
 
-        // TODO: Assert the answer is correct
+        // TODO: Assert that user's answer is correct
 
         // TODO: Delegate GetKeycard capability to the robber
     }
@@ -125,13 +127,11 @@ module overmind::capability_heist {
         @param answer - answer to the OPEN_VAULT_QUESTION question
     */
     public entry fun open_vault(robber: &signer) acquires Robber {
-        // TODO: Create a variable holding answer for OPEN_VAULT_QUESTION
-
         // TODO: Assert Robber is initialized
 
         // TODO: Acquire capabilities from the previous questions by the robber
 
-        // TODO: Assert the answer is correct
+        // TODO: Assert that user's answer is correct
 
         // TODO: Delegate OpenVault capability to the robber
     }
@@ -146,6 +146,18 @@ module overmind::capability_heist {
         feature: &Feature
     ) acquires Robber {
         // TODO: Delegate a capability with provided feature to the robber
+    }
+
+    /*
+        Gets user's answers and creates a hash out of it
+        @returns - SHA3_512 hash of user's answers
+    */
+    public fun get_flag(): vector<u8> {
+        // TODO: Create empty vector
+
+        // TODO: Push user's answers to the vector
+
+        // TODO: Return SHA3_512 hash of the vector
     }
 
     /*
