@@ -21,10 +21,10 @@ module overmind::capability_heist_test {
     const GET_KEYCARD_ANSWER: vector<u8> = x"564e1971233e098c26d412f2d4e652742355e616fed8ba88fc9750f869aac1c29cb944175c374a7b6769989aa7a4216198ee12f53bf7827850dfe28540587a97";
     const OPEN_VAULT_ANSWER: vector<u8> = x"51d13ec71721d968037b05371474cbba6e0acb3d336909662489d0ff1bf58b028b67b3c43e04ff2aa112529e2b6d78133a4bb2042f9c685dc9802323ebd60e10";
 
-    const ENTER_BANK_USER_ANSWER: vector<u8> = b"create";
-    const TAKE_HOSTAGE_USER_ANSWER: vector<u8> = b"Yes";
-    const GET_KEYCARD_USER_ANSWER: vector<u8> = b"2";
-    const OPEN_VAULT_USER_ANSWER: vector<u8> = b"No";
+    const ENTER_BANK_USER_ANSWER: vector<u8> = b"";
+    const TAKE_HOSTAGE_USER_ANSWER: vector<u8> = b"";
+    const GET_KEYCARD_USER_ANSWER: vector<u8> = b"";
+    const OPEN_VAULT_USER_ANSWER: vector<u8> = b"";
     const FLAG: vector<u8> = x"f9799208009b78b356a4323fac28f48675420e976bcfb8375857b51d4f7f4a8def8c09f2aa09deb814a0aeef122232124e086815782932e99608080e96acbdaa";
 
     #[test_only]
