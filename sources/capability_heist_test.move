@@ -266,8 +266,8 @@ module overmind::capability_heist_test {
             &robber
         );
         capability::delegate(
-            capability::acquire(&resource_account_signer, &capability_heist::new_get_keycard()),
-            &capability_heist::new_get_keycard(),
+            capability::acquire(&resource_account_signer, &capability_heist::new_take_hostage()),
+            &capability_heist::new_take_hostage(),
             &robber
         );
 
